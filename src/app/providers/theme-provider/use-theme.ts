@@ -1,5 +1,6 @@
-import { LS_THEME_KEY, Theme, ThemeContext } from './theme-context'
 import { useContext } from 'react'
+
+import { LS_THEME_KEY, Theme, ThemeContext } from './theme-context'
 
 export type UseThemeResult = {
   theme: Theme

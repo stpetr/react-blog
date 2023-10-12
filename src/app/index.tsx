@@ -2,14 +2,14 @@ import { lazy, Suspense } from 'react'
 
 import { Link, Route, Routes } from 'react-router-dom'
 
-import cn from './helpers/class-names'
+import cn from 'shared/helpers/class-names'
 
-import { useTheme } from './theme/use-theme'
+import { useTheme } from 'app/providers/theme-provider'
 
 import './styles/index.scss';
 
-const MainPage = lazy(() => import('./pages/main-page'))
-const AboutPage = lazy(() => import('./pages/about-page'))
+const MainPage = lazy(() => import('pages/main-page'))
+const AboutPage = lazy(() => import('pages/about-page'))
 
 export const App = () => {
   const { theme, toggleTheme } = useTheme()
