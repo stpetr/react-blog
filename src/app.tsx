@@ -2,6 +2,8 @@ import { lazy, Suspense } from 'react'
 
 import { Link, Route, Routes } from 'react-router-dom'
 
+import cn from './helpers/class-names'
+
 import { useTheme } from './theme/use-theme'
 
 import './styles/index.scss';
@@ -13,7 +15,7 @@ export const App = () => {
   const { theme, toggleTheme } = useTheme()
 
   return (
-    <div className={`app ${theme}`}>
+    <div className={cn('app', theme)}>
       <button onClick={toggleTheme}>Toggle Theme</button>
       <div>
         <Link to={'/'}>Main</Link>
