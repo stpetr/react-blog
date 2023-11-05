@@ -20,6 +20,7 @@ export const buildLoaders = (options: BuildOptions): RuleSetRule[] => {
           modules: {
             auto: /\.module\.s?css$/i,
             localIdentName: options.isDevMode ? '[name]__[local]--[hash:base64:5]' : '[hash:base64:8]',
+            exportLocalsConvention: 'camelCase',
           },
         }
       },
