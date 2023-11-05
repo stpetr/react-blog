@@ -1,9 +1,8 @@
-type ClassName = string
-type ClassNamesConditional = Record<string, boolean>
-type ClassNamesProps = (ClassName | ClassNamesConditional)[]
+type ClassNamesProps = (string | Record<string, boolean> | undefined)[]
 
 export const classNames = (...args: ClassNamesProps) => {
   return args
+    .filter(Boolean)
     .map((el) => {
       if (typeof el === 'string') {
         return el
