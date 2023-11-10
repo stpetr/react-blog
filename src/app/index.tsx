@@ -5,6 +5,8 @@ import cn from 'shared/helpers/class-names'
 import { useTheme } from 'app/providers/theme-provider'
 import { AppRouter } from 'app/providers/router'
 
+import { Navbar } from 'widgets/navbar'
+
 import './styles/index.scss';
 
 export const App = () => {
@@ -13,10 +15,7 @@ export const App = () => {
   return (
     <div className={cn('app', theme)}>
       <button onClick={toggleTheme}>Toggle Theme</button>
-      <div>
-        <Link to={'/'}>Main</Link>
-        <Link to={'/about'}>About</Link>
-      </div>
+      <Navbar />
       <AppRouter />
     </div>
   )
