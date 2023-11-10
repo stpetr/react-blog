@@ -9,3 +9,12 @@
   color: var(--primary-color);
   background-color: var(--bg-color);
 }
+
+.content-container {
+  display: flex;
+}
+
+.page-container {
+  flex-grow: 1;
+  padding: 20px;
+}
