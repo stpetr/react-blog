@@ -4,7 +4,7 @@ import MiniCssExtractPlugin from 'mini-css-extract-plugin'
 import { BuildOptions } from './types/config'
 
 export const buildLoaders = (options: BuildOptions): RuleSetRule[] => {
-  const typescriptLoader = {
+  const tsLoader = {
     test: /\.tsx?$/,
     use: 'ts-loader',
     exclude: /node_modules/,
@@ -28,8 +28,20 @@ export const buildLoaders = (options: BuildOptions): RuleSetRule[] => {
     ],
   }
 
+  const svgLoader = {
+    test: /\.svg$/i,
+    use: ['@svgr/webpack'],
+  }
+
+  const fileLoader = {
+    test: /\.png|jp?eg|gif$/i,
+    use: ['file-loader'],
+  }
+
   return [
-    typescriptLoader,
+    tsLoader,
     cssLoader,
+    svgLoader,
+    fileLoader,
   ]
 }
