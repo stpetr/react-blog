@@ -14,7 +14,6 @@ export const App = () => {
 
   return (
     <div className={cn('app', theme)}>
-      <button onClick={toggleTheme}>Toggle Theme</button>
       <Navbar />
       <AppRouter />
     </div>
