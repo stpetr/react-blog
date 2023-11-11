@@ -4,6 +4,7 @@ import { BrowserRouter } from 'react-router-dom'
 import { App } from 'app'
 import { ThemeProvider } from 'app/providers/theme-provider'
 
+import 'shared/config/i18n'
 
 const appRoot = createRoot(document.getElementById('root'))
 

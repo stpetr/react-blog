@@ -13,3 +13,5 @@ declare module '*.png'
 declare module '*.jpg'
 declare module '*.jpeg'
 declare module '*.gif'
+
+declare const __IS_DEV_MODE__: boolean

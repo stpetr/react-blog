@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { Suspense } from 'react'
 
 import cn from 'shared/helpers/class-names'
 
@@ -15,11 +15,13 @@ export const App = () => {
 
   return (
     <div className={cn('app', theme)}>
-      <Navbar />
-      <div className="content-container">
-        <Sidebar />
-        <AppRouter />
-      </div>
+      <Suspense fallback="Loading...">
+        <Navbar />
+        <div className="content-container">
+          <Sidebar />
+          <AppRouter />
+        </div>
+      </Suspense>
     </div>
   )
 }

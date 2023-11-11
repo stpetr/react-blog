@@ -5,6 +5,7 @@ import cn from 'shared/helpers/class-names'
 import { ThemeSwitch } from 'widgets/theme-switch'
 
 import styles from './sidebar.module.scss'
+import { LangSwitch } from 'widgets/lang-switch'
 
 type SidebarProps = {}
 
@@ -20,6 +21,7 @@ export const Sidebar: FC<SidebarProps> = () => {
       <button onClick={handleCollapseToggle}>Toggle</button>
       <div className={styles.switches}>
         <ThemeSwitch />
+        <LangSwitch />
       </div>
     </div>
   )
