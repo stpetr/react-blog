@@ -17,5 +17,6 @@ export const buildPlugins = ({paths, isDevMode}: BuildOptions): WebpackPluginIns
     new webpack.DefinePlugin({
       __IS_DEV_MODE__: JSON.stringify(isDevMode),
     }),
+    new webpack.HotModuleReplacementPlugin(),
   ]
 }
