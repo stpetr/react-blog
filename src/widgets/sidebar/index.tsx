@@ -16,7 +16,7 @@ export const Sidebar = () => {
 
   return (
     <div className={cn(styles.sidebar, { [styles.collapsed]: isCollapsed })}>
-      <button onClick={handleCollapseToggle}>Toggle</button>
+      <button onClick={handleCollapseToggle}>TOGGLE</button>
       <div className={styles.switches}>
         <ThemeSwitch />
         <LangSwitch />

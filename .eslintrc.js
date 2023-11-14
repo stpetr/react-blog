@@ -33,6 +33,7 @@ module.exports = {
   },
   "plugins": [
     "react",
+    "i18next",
   ],
   "rules": {
     "react/react-in-jsx-scope": "off",
@@ -44,7 +45,7 @@ module.exports = {
     "@typescript-eslint/no-floating-promises": "off",
     "@typescript-eslint/strict-boolean-expressions": "off",
     "@typescript-eslint/comma-dangle": ["error", "only-multiline"],
-
     "@typescript-eslint/no-unused-vars": "warn",
+    "i18next/no-literal-string": ["error", { markupOnly: true }],
   },
 }
