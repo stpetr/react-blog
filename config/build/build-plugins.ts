@@ -4,7 +4,7 @@ import MiniCssExtractPlugin from 'mini-css-extract-plugin'
 
 import { BuildOptions } from './types/config'
 
-export const buildPlugins = ({paths, isDevMode}: BuildOptions): WebpackPluginInstance[] => {
+export const buildPlugins = ({ paths, isDevMode }: BuildOptions): WebpackPluginInstance[] => {
   return [
     new HtmlWebpackPlugin({
       template: paths.html,
@@ -15,7 +15,7 @@ export const buildPlugins = ({paths, isDevMode}: BuildOptions): WebpackPluginIns
       chunkFilename: 'css/[name].[contenthash:8].css',
     }),
     new webpack.DefinePlugin({
-      __IS_DEV_MODE__: JSON.stringify(isDevMode),
+      _IS_DEV_MODE_: JSON.stringify(isDevMode),
     }),
     new webpack.HotModuleReplacementPlugin(),
   ]
