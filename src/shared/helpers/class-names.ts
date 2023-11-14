@@ -1,9 +1,9 @@
-type ClassNamesProps = (string | Record<string, boolean> | undefined)[]
+type ClassNamesProp = string | Record<string, boolean> | undefined
 
-export const classNames = (...args: ClassNamesProps) => {
+export const classNames = (...args: ClassNamesProp[]) => {
   return args
     .filter(Boolean)
-    .map((el) => {
+    .map((el: Exclude<ClassNamesProp, undefined>) => {
       if (typeof el === 'string') {
         return el
       }

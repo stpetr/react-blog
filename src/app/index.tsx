@@ -8,10 +8,10 @@ import { AppRouter } from 'app/providers/router'
 import { Navbar } from 'widgets/navbar'
 import { Sidebar } from 'widgets/sidebar'
 
-import './styles/index.scss';
+import './styles/index.scss'
 
 export const App = () => {
-  const { theme, toggleTheme } = useTheme()
+  const { theme } = useTheme()
 
   return (
     <div className={cn('app', theme)}>

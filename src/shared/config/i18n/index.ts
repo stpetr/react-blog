@@ -10,12 +10,11 @@ i18n
   .use(initReactI18next)
   .init({
     fallbackLng: 'en',
-    debug: __IS_DEV_MODE__,
+    debug: _IS_DEV_MODE_,
 
     interpolation: {
       escapeValue: false,
     }
   })
-
 
 export default i18n

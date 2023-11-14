@@ -3,7 +3,7 @@ import { useContext } from 'react'
 import { LS_THEME_KEY, Theme, ThemeContext } from './theme-context'
 
 export type UseThemeResult = {
-  theme: Theme
+  theme?: Theme
   toggleTheme: () => void
 }
 
@@ -12,7 +12,9 @@ export const useTheme = (): UseThemeResult => {
 
   const toggleTheme = () => {
     const newTheme = theme === Theme.LIGHT ? Theme.DARK : Theme.LIGHT
-    setTheme(newTheme)
+    if (typeof setTheme === 'function') {
+      setTheme(newTheme)
+    }
     localStorage.setItem(LS_THEME_KEY, newTheme)
   }
 

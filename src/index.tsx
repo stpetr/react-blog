@@ -6,7 +6,7 @@ import { ThemeProvider } from 'app/providers/theme-provider'
 
 import 'shared/config/i18n'
 
-const appRoot = createRoot(document.getElementById('root'))
+const appRoot = createRoot(document.getElementById('root') as HTMLElement)
 
 appRoot.render(
   <BrowserRouter>

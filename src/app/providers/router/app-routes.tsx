@@ -3,8 +3,8 @@ import { RouteProps } from 'react-router-dom'
 
 import { AppRouteKeys, AppRoutePaths } from 'shared/config/router'
 
-const MainPage = lazy(() => import('pages/main-page'))
-const AboutPage = lazy(() => import('pages/about-page'))
+const MainPage = lazy(async () => await import('pages/main-page'))
+const AboutPage = lazy(async () => await import('pages/about-page'))
 
 export const AppRoutes: Record<AppRouteKeys, RouteProps> = {
   [AppRouteKeys.MAIN]: {

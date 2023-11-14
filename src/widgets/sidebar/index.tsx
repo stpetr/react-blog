@@ -1,4 +1,4 @@
-import { FC, useState } from 'react'
+import { useState } from 'react'
 
 import cn from 'shared/helpers/class-names'
 
@@ -7,9 +7,7 @@ import { ThemeSwitch } from 'widgets/theme-switch'
 import styles from './sidebar.module.scss'
 import { LangSwitch } from 'widgets/lang-switch'
 
-type SidebarProps = {}
-
-export const Sidebar: FC<SidebarProps> = () => {
+export const Sidebar = () => {
   const [isCollapsed, setIsCollapsed] = useState(false)
 
   const handleCollapseToggle = () => {
@@ -17,7 +15,7 @@ export const Sidebar: FC<SidebarProps> = () => {
   }
 
   return (
-    <div className={cn(styles.sidebar, {[styles.collapsed]: isCollapsed})}>
+    <div className={cn(styles.sidebar, { [styles.collapsed]: isCollapsed })}>
       <button onClick={handleCollapseToggle}>Toggle</button>
       <div className={styles.switches}>
         <ThemeSwitch />
