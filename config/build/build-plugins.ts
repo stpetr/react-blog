@@ -1,6 +1,7 @@
 import webpack, { ProgressPlugin, WebpackPluginInstance } from 'webpack'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'
+import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer'
 
 import { BuildOptions } from './types/config'
 
@@ -18,5 +19,8 @@ export const buildPlugins = ({ paths, isDevMode }: BuildOptions): WebpackPluginI
       _IS_DEV_MODE_: JSON.stringify(isDevMode),
     }),
     new webpack.HotModuleReplacementPlugin(),
+    new BundleAnalyzerPlugin({
+      openAnalyzer: false,
+    }),
   ]
 }
