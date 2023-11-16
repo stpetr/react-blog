@@ -1,4 +1,6 @@
 {
   "CURRENT_LANGUAGE": "Русский",
-  "PAGE_NOT_FOUND": "Страница не найдена"
+  "PAGE_NOT_FOUND": "Страница не найдена",
+  "REFRESH_PAGE": "Обновить страницу",
+  "SOMETHING_WENT_WRONG": "Что-то пошло не так"
 }

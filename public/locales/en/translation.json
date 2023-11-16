@@ -1,4 +1,6 @@
 {
   "CURRENT_LANGUAGE": "English",
-  "PAGE_NOT_FOUND": "Page not found"
+  "PAGE_NOT_FOUND": "Page not found",
+  "REFRESH_PAGE": "Refresh page",
+  "SOMETHING_WENT_WRONG": "Something went terribly wrong"
 }
