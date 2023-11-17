@@ -1,4 +1,4 @@
-import cn from 'shared/helpers/class-names'
+import cn from './index'
 
 describe('classNames', () => {
   test('test single class', () => {

@@ -3,6 +3,8 @@
  * https://jestjs.io/docs/configuration
  */
 
+import path from 'path'
+
 import type { Config } from 'jest'
 
 const config: Config = {
@@ -13,6 +15,8 @@ const config: Config = {
     '<rootDir>/src',
   ],
 
+  setupFilesAfterEnv: ['<rootDir>/config/jest/jest-setup.ts'],
+
   // A preset that is used as a base for Jest's configuration
   preset: 'ts-jest',
 
@@ -21,6 +25,11 @@ const config: Config = {
   //   '**/__tests__/**/*.[jt]s?(x)',
   //   '**/?(*.)+(spec|test).[tj]s?(x)'
   // ],
+
+  moduleNameMapper: {
+    '\\.s?css$': 'identity-obj-proxy',
+    '\\.svg': path.resolve(__dirname, 'JestEmptyComponent.tsx'),
+  },
 
   // The test environment that will be used for testing
   testEnvironment: 'jsdom',
