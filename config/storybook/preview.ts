@@ -1,5 +1,6 @@
 import type { Preview } from '@storybook/react'
 
+import { RouterDecorator } from 'shared/config/storybook/router-decorator'
 import { StyleDecorator } from 'shared/config/storybook/style-decorator'
 import { ThemeDecorator } from 'shared/config/storybook/theme-decorator'
 
@@ -16,6 +17,7 @@ const preview: Preview = {
     },
   },
   decorators: [
+    RouterDecorator,
     StyleDecorator,
     ThemeDecorator(Theme.LIGHT),
   ]
