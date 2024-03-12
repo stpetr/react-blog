@@ -98,6 +98,7 @@
         "target": "chrome.app",
         "preset": "iPhone 7"
       }
-    }
+    },
+    "chromeDockerUseCopy": true
   }
 }
