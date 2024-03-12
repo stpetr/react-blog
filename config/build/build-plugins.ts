@@ -6,7 +6,7 @@ import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer'
 import { BuildOptions } from './types/config'
 
 export const buildPlugins = ({ paths, isDevMode }: BuildOptions): WebpackPluginInstance[] => {
-  return [
+  const plugins = [
     new HtmlWebpackPlugin({
       template: paths.html,
     }),
@@ -18,9 +18,16 @@ export const buildPlugins = ({ paths, isDevMode }: BuildOptions): WebpackPluginI
     new webpack.DefinePlugin({
       _IS_DEV_MODE_: JSON.stringify(isDevMode),
     }),
-    new webpack.HotModuleReplacementPlugin(),
-    new BundleAnalyzerPlugin({
-      openAnalyzer: false,
-    }),
   ]
+
+  if (isDevMode) {
+    plugins.push(
+      new webpack.HotModuleReplacementPlugin(),
+      new BundleAnalyzerPlugin({
+        openAnalyzer: false,
+      }),
+    )
+  }
+
+  return plugins
 }
