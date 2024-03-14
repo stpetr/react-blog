@@ -2,6 +2,7 @@ module.exports = {
   env: {
     browser: true,
     es2021: true,
+    jest: true,
   },
   settings: {
     react: {
@@ -11,7 +12,8 @@ module.exports = {
   extends: [
     'standard-with-typescript',
     'plugin:react/recommended',
-    'plugin:storybook/recommended'
+    'plugin:storybook/recommended',
+    'plugin:i18next/recommended',
   ],
   overrides: [
     {
@@ -23,6 +25,13 @@ module.exports = {
       ],
       parserOptions: {
         sourceType: 'script',
+      },
+    },
+    {
+      files: ['**/src/**/*.{test,stories}.{ts,tsx}'],
+      rules: {
+        'i18next/no-literal-string': 'off',
+        'max-len': 'off',
       },
     },
   ],
@@ -49,7 +58,14 @@ module.exports = {
     '@typescript-eslint/comma-dangle': ['error', 'only-multiline'],
     '@typescript-eslint/no-unused-vars': 'warn',
     '@typescript-eslint/space-before-function-paren': 'off',
-    'i18next/no-literal-string': ['error', { markupOnly: true }],
+    'i18next/no-literal-string': [
+      'error',
+      {
+        markupOnly: true,
+        ignoreAttribute: ['data-testid', 'to'],
+      },
+    ],
+    'max-len': ['error', { ignoreComments: true, code: 120 }],
     'no-console': ['error', { allow: ['warn', 'error'] }],
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'error',
