@@ -35,6 +35,7 @@ module.exports = {
   "plugins": [
     "react",
     "i18next",
+    "react-hooks",
   ],
   "rules": {
     "react/react-in-jsx-scope": "off",
@@ -50,5 +51,7 @@ module.exports = {
     "@typescript-eslint/space-before-function-paren": "off",
     "i18next/no-literal-string": ["error", { markupOnly: true }],
     "no-console": ["error", { allow: ["warn", "error"] }],
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "error",
   },
 }
