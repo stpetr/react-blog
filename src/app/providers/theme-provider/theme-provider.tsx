@@ -6,10 +6,11 @@ const defaultTheme = localStorage.getItem(LS_THEME_KEY) as Theme ?? Theme.LIGHT
 
 type ThemeProviderProps = {
   children: ReactNode
+  initTheme?: Theme
 }
 
-export const ThemeProvider: FC<ThemeProviderProps> = ({ children }) => {
-  const [theme, setTheme] = useState<Theme>(defaultTheme)
+export const ThemeProvider: FC<ThemeProviderProps> = ({ children, initTheme }) => {
+  const [theme, setTheme] = useState<Theme>(initTheme ?? defaultTheme)
 
   const defaultProps = useMemo(() => ({
     theme,
