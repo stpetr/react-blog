@@ -9,6 +9,8 @@ import { PageError } from 'widgets/page-error'
 
 import 'shared/config/i18n'
 
+import 'app/styles/index.scss'
+
 const appRoot = createRoot(document.getElementById('root') as HTMLElement)
 
 appRoot.render(
