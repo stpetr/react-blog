@@ -6,6 +6,7 @@ import styles from './app-button.module.scss'
 
 export enum AppButtonTheme {
   CLEAR = 'clear',
+  CLEAR_INVERSE = 'clear-inverse',
   OUTLINE = 'outline',
 }
 
