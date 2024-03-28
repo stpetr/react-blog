@@ -16,6 +16,7 @@ export const LangSwitch = ({ className, short }: LangSwitchProps) => {
 
   return (
     <AppButton
+      className={className}
       theme={AppButtonTheme.CLEAR}
       onClick={handleLanguageChange}
     >
