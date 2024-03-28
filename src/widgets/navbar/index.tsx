@@ -26,6 +26,7 @@ export const Navbar = () => {
         </AppButton>
       </nav>
       <Modal isOpen={isAuthModalOpen} onClose={handleAuthModalToggle}>
+        {/* eslint-disable-next-line i18next/no-literal-string */}
         {/* eslint-disable-next-line */}
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam atque commodi cupiditate deserunt dolore eaque eligendi saepe sunt, velit voluptatibus!
       </Modal>
